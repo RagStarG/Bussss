@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger & Member Login/Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://imgs.search.brave.com/gmUj8FuT-QHCStEKoyRNvOTW96kednuhN4lB2sVEZKY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/OC8xNC8xMy8yMy9v/Y2Vhbi0zNjA1NTQ3/XzY0MC5qcGc" alt="Background" class="background-image">
+        <div class="form-container">
+            <div class="user-type-tabs">
+                <button class="user-type-tab active" onclick="switchUserType('passenger')">Passenger</button>
+                <button class="user-type-tab" onclick="switchUserType('member')">Member</button>
+            </div>
+            <div id="passenger-forms" class="user-type-content active">
+                <div class="tabs">
+                    <button class="tab active" onclick="openTab('passenger-login')">Login</button>
+                    <button class="tab" onclick="openTab('passenger-signup')">Signup</button>
+                </div>
+                <div id="passenger-login" class="form-content active">
+                    <h2><i class="fas fa-user-circle"></i> Passenger Login</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="passenger-login-email"><i class="fas fa-envelope"></i> Email:</label>
+                            <input type="email" id="passenger-login-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passenger-login-password"><i class="fas fa-lock"></i> Password:</label>
+                            <input type="password" id="passenger-login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Login</button>
+                    </form>
+                </div>
+                <div id="passenger-signup" class="form-content">
+                    <h2><i class="fas fa-user-plus"></i> Passenger Signup</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="passenger-signup-name"><i class="fas fa-user"></i> Name:</label>
+                            <input type="text" id="passenger-signup-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passenger-signup-email"><i class="fas fa-envelope"></i> Email:</label>
+                            <input type="email" id="passenger-signup-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="passenger-signup-password"><i class="fas fa-lock"></i> Password:</label>
+                            <input type="password" id="passenger-signup-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Signup</button>
+                    </form>
+                </div>
+            </div>
+            <div id="member-forms" class="user-type-content">
+                <div class="tabs">
+                    <button class="tab active" onclick="openTab('member-login')">Login</button>
+                    <button class="tab" onclick="openTab('member-signup')">Signup</button>
+                </div>
+                <div id="member-login" class="form-content active">
+                    <h2><i class="fas fa-id-card"></i> Member Login</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="member-login-id"><i class="fas fa-user"></i> Member ID:</label>
+                            <input type="text" id="member-login-id" name="member-id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="member-login-password"><i class="fas fa-lock"></i> Password:</label>
+                            <input type="password" id="member-login-password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Login</button>
+                    </form>
+                </div>
+                <div id="member-signup" class="form-content">
+                    <h2><i class="fas fa-user-tie"></i> Member Signup</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="member-signup-name"><i class="fas fa-user"></i> Name:</label>
+                            <input type="text" id="member-signup-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="member-signup-email"><i class="fas fa-envelope"></i> Email:</label>
+                            <input type="email" id="member-signup-email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="member-signup-password"><i class="fas fa-lock"></i> Password:</label>
+                            <input type="password" id="member-signup-password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="member-signup-code"><i class="fas fa-key"></i> Member Code:</label>
+                            <input type="text" id="member-signup-code" name="member-code" required>
+                        </div>
+                        <button type="submit" class="btn-submit">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
